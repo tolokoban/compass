@@ -1,0 +1,4 @@
+<x-html app="main" title="Compass">
+    <div id="numeric"></div>
+    <div id="compass"></div>
+</x-html>

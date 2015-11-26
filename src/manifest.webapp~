@@ -1,0 +1,15 @@
+{
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Tolokoban",
+    "url": "https://github.com/tolokoban/compass"
+  },
+  "icons": {
+    "60": "/icon-60.png",
+    "128": "/icon-128.png",
+    "256": "/icon-256.png"
+  },
+  "name": "Compass",
+  "version": "1.0.7",
+  "description": "Simple magnetic compass for Firefox OS."
+}
