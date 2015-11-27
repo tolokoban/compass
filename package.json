@@ -3,6 +3,16 @@
       "type": "git",
       "url": "https://github.com/tolokoban/compass.git"
     },
+    "keywords": [
+    "tolokoban",
+    "compass",
+    "magnetic",
+    "orientation",
+    "north",
+    "south",
+    "west",
+    "East",
+    "navigation"],
     "homepage": "https://github.com/tolokoban/compass",
     "bugs": {
       "url": "https://github.com/tolokoban/compass/issues"
@@ -12,7 +22,7 @@
       "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
     },
     "name": "Compass",
-    "version": "1.0.10",
+    "version": "1.0.61",
     "author": "Tolokoban",
     "description": "Simple magnetic compass for Firefox OS.",
     "license": "GPL",

@@ -12,34 +12,34 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16vmin;
-    background: #eee;
+    font-family: serif;
+    background: #ddd;
     overflow: hidden;
 }
 
 #numeric {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
     height: 2em;
     line-height: 2em;
     text-align: center;
     display: block;
     background: #29306a;
-    color: #eee;
+    color: #eee;    
 }
 
-#compass {
+#compass, #shadow {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100vmin;
     height: 100vmin;
-
+/*
     background-repeat:   no-repeat;
     background-position: 50% 50%;
     background-size:     contain;
     background-image: url(main/compass.png);
+*/
 }
-
-@media (orientation: portrait) {
-    #compass {
-    }
-}
-

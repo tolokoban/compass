@@ -1,4 +1,106 @@
 <x-html app="main" title="Compass">
+    <div id="compass">
+        <svg version="1.1"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="100%" height="100%"
+             viewBox="-256 -256 512 512">
+            <g stroke="#29306A" fill="#29306A">
+                <!-- Main circles. -->
+                <circle stroke-width="6" fill="#fff" r="173"></circle>
+                <circle stroke-width="1" fill="none" r="150"></circle>
+                <circle stroke-width="3" fill="none" r="125"></circle>
+                <circle stroke-width="2" fill="none" r="100"></circle>
+                <circle stroke-width="1" fill="none" r="90"></circle>
+
+                <!-- Rules on each deg. -->
+                <x-loop $angle="0:359" $len="195;185;185;185;185">
+                    <tag:line x1="0" x2="0" y1="173">
+                        <att:transform>rotate(<$angle/>)</att:transform>
+                        <att:y2><$len/></att:y2>
+                    </tag:line>
+                </x-loop>
+                
+                <!-- NE, SE, SW, NW -->
+                <g font-size="20" text-anchor="middle" stroke-size="1">
+                    <x-loop $angle="45;135;225;315" $text="NE;SE;SW;NW">
+                        <tag:g>
+                            <att:transform>rotate(<$angle/>)</att:transform>
+                            <rect height="20" x="-20" y="-160" width="40" fill="#fff" stroke="none"/>
+                            <text x="0" y="-145"><$text/></text>
+                        </tag:g>
+                    </x-loop>
+                </g>
+
+                <!-- N, S, E, W -->
+                <g font-size="40" text-anchor="middle" stroke-size="1">
+                    <x-loop $angle="0:359:90" $text="N;E;S;W">
+                        <tag:g>
+                            <att:transform>rotate(<$angle/>)</att:transform>
+                            <text x="0" y="-225"><$text/></text>
+                        </tag:g>
+                    </x-loop>
+                </g>
+
+                <!-- 15° bullets -->
+                <x-loop $angle="15:360:15">
+                    <tag:g>
+                        <att:transform>rotate(<$angle/>)</att:transform>
+                        <circle cy="112" r="3" stroke="none"/>
+                    </tag:g>
+                </x-loop>
+
+                <!-- Numbered graduations -->
+                <x-loop $quarter="0:270:90">
+                    <tag:g stroke="none" font-size="20" text-anchor="middle">
+                        <att:transform>rotate(<$quarter/>)</att:transform>
+                        <x-loop $angle="15:75:15">
+                            <tag:g>
+                                <att:transform>rotate(<$angle/>)</att:transform>
+                                <text x="0" y="-200"><x-calc>$angle + $quarter</x-calc></text>
+                            </tag:g>
+                        </x-loop>
+                    </tag:g>
+                </x-loop>
+
+                <!-- Big arrows -->
+                <x-loop $angle="0:270:90">
+                    <tag:g stroke-width="2">
+                        <att:transform>rotate(<$angle/>)</att:transform>
+                        <path fill="#fff"
+                              d="M0,0L-30-30L0,-220L30,-30Z"/>
+                        <path d="M0,0L30-30L0,-220Z"/>
+                    </tag:g>
+                </x-loop>
+
+                <!-- Little arrows -->
+                <x-loop $angle="45:315:90">
+                    <tag:g stroke-width="2">
+                        <att:transform>rotate(<$angle/>)</att:transform>
+                        <path fill="#fff"
+                              d="M0,0L-15-15L0,-140L15,-15Z"/>
+                        <path d="M0,0L15-15L0,-140Z"/>
+                    </tag:g>
+                </x-loop>
+            </g>
+        </svg>
+    </div>
+    <div id="shadow">
+        <svg version="1.1"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="100%" height="100%"
+             viewBox="-256 -256 512 512">
+            <defs>
+                <clipPath id="circle">
+                    <circle r="173"/>
+                </clipPath>
+            </defs>
+            <circle clip-path="url(#circle)"
+                    cx="256" cy="256" r="300"
+                    fill="#003" stroke="none"
+                    opacity=".2"/>
+        </svg>
+    </div>
     <div id="numeric"><b>---</b>.<small>-</small> °</div>
-    <div id="compass"></div>
 </x-html>
