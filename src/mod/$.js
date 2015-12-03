@@ -2,11 +2,11 @@ exports.config={
     name:"Compass",
     description:"Simple magnetic compass for Firefox OS.",
     author:"Tolokoban",
-    version:"1.0.61",
+    version:"1.0.82",
     major:1,
     minor:0,
-    revision:61,
-    date:new Date(2015,10,27,14,9,59)
+    revision:82,
+    date:new Date(2015,11,3,14,10,45)
 };
 var currentLang = null;
 exports.lang = function(lang) {
