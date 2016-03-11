@@ -1,0 +1,38 @@
+div.wtag-book {
+  position: relative;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+div.wtag-book.expand {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+div.wtag-book > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+div.wtag-book > *:not(.hidden) {
+  display: block;
+}
+
+div.wtag-book > *.wtag-flex:not(.hidden) {
+  display: flex;
+}
+
+div.wtag-book > *.hidden {
+  display: none;
+}
+

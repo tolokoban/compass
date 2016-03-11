@@ -1,0 +1,142 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8, h9, ul {
+    margin: 4px 0;
+}
+
+#body {
+    padding: 8px 488px 8px 8px;
+}
+
+#modules > h1,
+#services > h1 {
+    display: block;
+    line-height: 24px;
+    font-size: 16px;
+    text-align: left;
+    padding: 0 8px;
+    margin: 0 0 8px 0;
+    border-bottom: 1px solid #000;
+    background-color: #9CD;
+}
+
+#modules,
+#services {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 240px;
+    height: 100%;
+    padding: 8px;
+    margin: 0;
+    overflow: auto;
+    border-left: 1px solid #000;
+    background-color: #fed;
+}
+
+#modules {
+    right: 0;
+}
+
+#services {
+    right: 240px;
+}
+
+#services a,
+#modules a {
+    display: block;
+    font-family: monospace;
+}
+
+ul.param > li {
+   list-style: none;
+}
+
+ul.param span.name {
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #777;
+    padding-right: 16px;
+}
+
+ul.param span.type {
+    color: #565;
+    font-style: italic;
+    padding-right: 16px;
+}
+
+ul.param span.short {
+    position: relative;
+    display: inline;
+    margin-left: 8px;
+    padding: 0;
+    word-spacing: nowrap;
+    background-color: #ffd;
+}
+
+ul.param span.short::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    background-image: linear-gradient(to left, #ffe, transparent);
+}
+
+div.expand {
+    display: block;
+    padding: 0;
+}
+
+div.expand > *:first-child {
+    display: block;
+    cursor: pointer;
+}
+
+div.expand.show > *:last-child {
+    display: block;
+}
+
+div.expand > *:last-child {
+    display: none;
+}
+
+*.inline,
+*.inline > * {
+    display: inline-block;
+}
+
+*.inline > * {
+    margin: 0;
+}
+
+div.Methods,
+div.Statics {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #555;
+    line-height: 24px;
+    padding: 0 8px;
+}
+
+div.Methods > span:first-child,
+div.Statics > span:first-child {
+    font-size: 70%;
+    font-variant: small-caps;
+    padding: 2px 6px;
+    border-radius: 8px;
+    background-color: #333;
+    color: #ccc;
+    margin-right: 32px;
+}
+
+div.Methods {
+    background-color: #ddf;
+}
+
+div.Statics {
+    background-color: #fdd;
+}

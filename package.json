@@ -1,9 +1,9 @@
 {
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/tolokoban/compass.git"
-    },
-    "keywords": [
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tolokoban/compass.git"
+  },
+  "keywords": [
     "tolokoban",
     "compass",
     "magnetic",
@@ -12,22 +12,29 @@
     "south",
     "west",
     "East",
-    "navigation"],
-    "homepage": "https://github.com/tolokoban/compass",
-    "bugs": {
-      "url": "https://github.com/tolokoban/compass/issues"
-    },
-    "scripts": {
-      "test": "jasmine",
-      "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
-    },
-    "name": "Compass",
-    "version": "1.1.0",
-    "author": "Tolokoban",
-    "description": "Simple magnetic compass for Firefox OS.",
-    "license": "GPL",
-    "tfw": {
-      "modules": [],
-      "compile": {"type": "firefoxos", "files": "\\.html$"}
+    "navigation"
+  ],
+  "homepage": "https://github.com/tolokoban/compass",
+  "bugs": {
+    "url": "https://github.com/tolokoban/compass/issues"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
+  },
+  "name": "Compass",
+  "version": "1.1.0",
+  "author": "Tolokoban",
+  "description": "Simple magnetic compass for Firefox OS.",
+  "license": "GPL",
+  "tfw": {
+    "modules": [],
+    "compile": {
+      "type": "firefoxos",
+      "files": "\\.html$"
     }
+  },
+  "dependencies": {
+    "toloframework": "^0.31.1"
+  }
 }

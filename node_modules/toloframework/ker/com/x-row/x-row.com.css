@@ -1,0 +1,69 @@
+.x-row {
+    display: table;
+    border-collapse: collapse;
+}
+
+.x-row.fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.x-row > div,
+.x-row > div > div {
+    margin: 0;
+    padding: 0;
+}
+
+.x-row > div > div {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.x-row.horizontal > div {
+    display: contents;
+}
+
+.x-row.vertical > div {
+    display: table-row;
+}
+
+.x-row > div.TRBL > div > div,
+.x-row > div.TRL > div > div,
+.x-row > div.RBL > div > div,
+.x-row > div.RL > div > div
+{
+    width: 100%;
+}
+
+.x-row > div.TRBL > div > div,
+.x-row > div.TRB > div > div,
+.x-row > div.TBL > div > div,
+.x-row > div.TB > div > div
+{
+    height: 100%;
+}
+
+@media (orientation: portrait) {
+    .x-row.narrow > div {
+        display: contents;
+    }
+    .x-row.wide > div {
+        display: table-row;
+    }
+}
+
+@media (orientation: landscape) {
+    .x-row.wide > div {
+        display: contents;
+    }
+    .x-row.narrow > div {
+        display: table-row;
+    }
+}

@@ -1,0 +1,17 @@
+pre.highlight {
+    position: relative;
+    margin: 4px;
+    padding: 8px;
+    background: #ddd;
+    border: 1px solid #bbb;
+}
+
+pre.highlight.js::after {
+    content: "Javascript";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px;
+    font-variant: small-fonts;
+    opacity: .5;
+}

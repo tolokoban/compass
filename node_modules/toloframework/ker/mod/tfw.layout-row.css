@@ -1,0 +1,19 @@
+div.tfw-layout-row {
+    display: inline-table;
+}
+
+div.tfw-layout-row > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.tfw-layout-row.top > div {
+    vertical-align: top;
+}
+
+div.tfw-layout-row > div > div {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+

@@ -1,0 +1,73 @@
+.wtag-flex {
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.wtag-flex.center {
+    align-items: center;
+    align-content: center;
+}
+
+.wtag-flex.wrap {
+    flex-wrap: wrap;
+}
+
+
+.wtag-flex.expand {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wtag-flex > * {
+    flex: 1 1 auto;
+    flex: 1 1 main-size;
+}
+
+.wtag-flex > *.fixed {
+    flex: 0;
+}
+
+.wtag-flex.row,
+.wtag-flex.horizontal {
+    flex-direction: row;
+}
+
+.wtag-flex.vertical,
+.wtag-flex.column {
+    flex-direction: column;
+}
+
+@media (orientation: landscape) {
+    .wtag-flex.wide {
+        flex-direction: row;
+    }
+    .wtag-flex.narrow {
+        flex-direction: column;
+    }
+}
+
+@media (orientation: portrait) {
+    .wtag-flex.wide {
+        flex-direction: column;
+    }
+    .wtag-flex.narrow {
+        flex-direction: row;
+    }
+}
+
+.wtag-flex > *.grow {
+    flex-grow: 1;
+}
+
+.wtag-flex > *.grow-2 {
+    flex-grow: 2;
+}
+
+
+.wtag-flex > *.grow-3 {
+    flex-grow: 3;
+}

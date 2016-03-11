@@ -1,0 +1,229 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* See https://github.com/fred-wang/mathml.css */
+   
+@namespace "http://www.w3.org/1998/Math/MathML";
+
+/* math */
+div.math {
+    display: inline;
+    text-indent: 0;
+}
+div.math[display="block"] {
+    display: block;
+    text-align: center;
+}
+
+/* fraction */
+div.math mfrac {
+    display: inline-block !important;
+    vertical-align: -50%;
+    border-collapse: collapse;
+}
+div.math mfrac > * {
+    display: block !important;
+}
+div.math mfrac > * + * {
+    display: inline-block !important;
+    vertical-align: top;
+}
+div.math mfrac:not([linethickness="0"]) > *:first-child {
+    border-bottom: solid thin;
+}
+
+/* sub/sup scripts */
+div.math msub > *:nth-child(2), msubsup > *:nth-child(2),
+div.math mmultiscripts > *:nth-child(2n+2),
+div.math mmultiscripts > mprescripts ~ *:nth-child(2n+3) {
+    font-size: 0.8em;
+    vertical-align: sub;
+}
+div.math msup > *:nth-child(2), msubsup > *:nth-child(3),
+div.math mmultiscripts > *:nth-child(2n+3),
+div.math mmultiscripts > mprescripts ~ *:nth-child(2n+2) {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+div.math mprescripts:after {
+    content: ";";
+}
+
+/* under/over scripts */
+div.math munder,
+div.math mover,
+div.math munderover {
+    display: inline-flex !important;
+    flex-direction: column;
+}
+div.math munder > *:nth-child(2),
+div.math munderover > *:nth-child(2) {
+    font-size: 0.8em;
+    order: +1;
+}
+div.math mover > *:nth-child(2),
+div.math munderover > *:nth-child(3) {
+    font-size: 0.8em;
+    order: -1;
+}
+div.math munder {
+    vertical-align: text-top;
+}
+div.math mover {
+    vertical-align: text-bottom;
+}
+div.math munderover {
+    vertical-align: middle;
+}
+
+/* roots */
+div.math msqrt,
+div.math mroot {
+    display: inline-flex !important;
+    margin-left: .5em;
+    vertical-align: middle;
+    border-top: solid thin;
+}
+div.math msqrt:before,
+div.math mroot:before {
+    margin-left: -.5em;
+    content: "\221A";
+}
+div.math mroot > *:nth-child(2) {
+    margin-right: .25em;
+    margin-left: -.75em;
+    font-size: 0.8em;
+    order: -1;
+}
+
+/* menclose */
+div.math menclose {
+  display: inline-table !important;
+  border-collapse: separate;
+  border-spacing: 0.4ex 0;
+}
+div.math menclose[notation*="top"],
+div.math menclose[notation*="actuarial"] {
+  border-top: solid thin;
+}
+div.math menclose[notation*="bottom"],
+div.math menclose[notation*="madruwb"] {
+    border-bottom: solid thin;
+}
+div.math menclose[notation*="right"],
+div.math menclose[notation*="actuarial"],
+div.math menclose[notation*="madruwb"] {
+    border-right: solid thin;
+}
+div.math menclose[notation*="left"] {
+    border-left: solid thin;
+}
+div.math menclose[notation*="box"],
+div.math menclose[notation*="roundedbox"],
+div.math menclose[notation*="circle"] {
+    border: solid thin;
+}
+div.math menclose[notation*="roundedbox"] {
+    border-radius: 15%;
+}
+div.math menclose[notation*="circle"] {
+    border-radius: 50%;
+}
+div.math menclose[notation*="horizontalstrike"] {
+    text-decoration: line-through;
+}
+
+/* table */
+div.math mtable {
+    display: inline-table !important;
+    vertical-align: middle;
+}
+div.math mtr {
+    display: table-row !important;
+}
+div.math mtd {
+    display: table-cell !important;
+    padding: 0 0.5ex;
+}
+
+/* token elements */
+div.math mspace {
+    margin: .2em;
+}
+div.math mi {
+    font-style: italic;
+}
+div.math mo {
+    margin-right: .2em;
+    margin-left: .2em;
+}
+div.math ms:before,
+div.math ms:after {
+    content:"\0022";
+}
+div.math ms[lquote]:before {
+    content: attr(lquote);
+}
+div.math ms[rquote]:after {
+    content: attr(rquote);
+}
+
+/* mathvariants */
+div.math [mathvariant="bold"],
+div.math [mathvariant="bold-italic"],
+div.math [mathvariant="bold-sans-serif"],
+div.math [mathvariant="sans-serif-bold-italic"] {
+    font-weight: bold;
+    font-style: normal;
+}
+div.math [mathvariant="monospace"] {
+    font-family: monospace;
+    font-style: normal;
+}
+div.math [mathvariant="sans-serif"],
+div.math [mathvariant="bold-sans-serif"],
+div.math [mathvariant="sans-serif-italic"],
+div.math [mathvariant="sans-serif-bold-italic"] {
+    font-family: sans-serif;
+    font-style: normal;
+}
+div.math [mathvariant="italic"],
+div.math [mathvariant="bold-italic"],
+div.math [mathvariant="sans-serif-italic"],
+div.math [mathvariant="sans-serif-bold-italic"] {
+    font-style: italic;
+}
+div.math [mathvariant="normal"] {
+    font-style: normal;
+}
+
+/* mphantom */
+div.math mphantom {
+    visibility: hidden;
+}
+
+/* merror */
+div.math merror {
+    outline: solid thin red;
+}
+div.math merror:before {
+    content: "Error: ";
+}
+
+/* annotations */
+div.math semantics > *:first-child {
+    display: inline;
+}
+div.math annotation,
+div.math annotation-xml {
+    font-family: monospace;
+    display: none !important;
+}
+div.math math:active > semantics > *:first-child,
+div.math math:active > semantics > *:first-child {
+    display: none !important;
+}
+div.math math:active annotation:first-of-type {
+    display: inline !important;
+}

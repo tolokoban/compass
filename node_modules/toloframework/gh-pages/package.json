@@ -1,0 +1,23 @@
+{
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tolokoban/ToloFrameWork.git"
+    },
+    "homepage": "https://github.com/tolokoban/ToloFrameWork",
+    "bugs": {
+      "url": "https://github.com/tolokoban/ToloFrameWork/issues"
+    },
+    "scripts": {
+      "test": "jasmine",
+      "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
+    },
+    "name": "ToloFrameWork User Manual",
+    "version": "1.0.105",
+    "author": "Tolokoban",
+    "description": "ToloFrameWork User Manual",
+    "license": "GPL",
+    "tfw": {
+      "modules": [],
+      "compile": {"type": "firefoxos", "files": "\\.html$"}
+    }
+}

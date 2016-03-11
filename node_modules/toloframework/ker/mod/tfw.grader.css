@@ -1,0 +1,33 @@
+.tfw-grader {
+    padding: 1em;
+    border-radius: 1em;
+    border: 4px dashed rgba(0,0,0,.5);
+}
+
+.tfw-grader > pre {
+    margin: 0;
+}
+
+
+.tfw-grader > pre.error {
+    margin: 1em 0 0 0;
+    color: #f00;
+    font-size: 80%;
+    line-height: 100%;
+}
+
+.tfw-grader > div.ok {
+    display: inline-block;
+    color: #0e0;
+    text-shadow: 1px 1px 0 #000;
+    font-weight: bolder;
+    margin: 0 0 0 2em;
+    transform: translateX(5em);
+    opacity: 0;
+}
+
+.tfw-grader > div.ok.show {
+    transition: all .3s;
+    transform: translateX(0);
+    opacity: 1;
+}

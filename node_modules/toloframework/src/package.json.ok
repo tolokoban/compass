@@ -1,0 +1,49 @@
+{
+  "name": "toloframework",
+  "version": "0.15.0",
+  "description": "Javascript/HTML/CSS compiler for Firefox OS or nodewebkit apps using modules in the nodejs style.",
+  "bin": {
+    "tfw": "./tfw.js"
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tolokoban/ToloFrameWork.git"
+  },
+  "keywords": [
+    "tolokoban",
+    "firefoxos",
+    "fxos",
+    "commonjs",
+    "mobile",
+    "webapp",
+    "designer",
+    "framework",
+    "require"
+  ],
+  "author": "Tolokoban",
+  "license": "GNU GPL 3",
+  "bugs": {
+    "url": "https://github.com/tolokoban/ToloFrameWork/issues"
+  },
+  "dependencies": {
+    "colors": "~0.6.2",
+    "connect": "~3.2.0",
+    "esprima": "^1.2.2",
+    "highlight.js": "^8.4.0",
+    "htmlparser2": "~3.7.3",
+    "less": "^1.7.5",
+    "marked": "^0.3.2",
+    "node-less": "^1.0.0",
+    "readline-sync": "~0.4.8",
+    "string": "^3.0.0",
+    "uglify-js": "~2.4.15",
+    "uglifycss": "0.0.9",
+    "dox": "~0.6.1"
+  }
+}

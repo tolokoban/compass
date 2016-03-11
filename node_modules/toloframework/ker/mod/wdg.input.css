@@ -1,0 +1,51 @@
+div.wdg-input {
+    display: inline-block;
+    padding: 0;
+    margin: 4px;
+}
+
+div.wdg-input > * {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+div.wdg-input > input {
+    height: 24px;
+    box-shadow: 0 0 1px 1px #ddd;
+    padding: 0 6px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-bottom: 3px solid #000;
+    color: #000;
+}
+
+div.wdg-input > input[disabled] {
+    background-color: #aaa;
+}
+
+div.wdg-input > input.valid {
+    border-bottom: 3px solid #3d3;
+}
+
+div.wdg-input > input.not-valid {
+    border-bottom: 3px solid #d33;
+    color: #d33;
+}
+
+div.wdg-input > input:focus {
+    box-shadow: 0 0 1px 1px #ff8;
+}
+
+
+div.wdg-input > div.label {
+    background-color: #468;
+    border-radius: 12px 12px 0 0;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    padding: 0 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

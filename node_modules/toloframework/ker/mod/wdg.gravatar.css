@@ -1,0 +1,10 @@
+.wdg-gravatar {
+    background-color: rgba(0,0,0,.6);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wdg-gravatar.hide {
+    display: none;
+}

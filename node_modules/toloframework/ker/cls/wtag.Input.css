@@ -1,0 +1,17 @@
+input.wtag-input {
+    font-size: 100%;
+    width: 90%;
+    padding: .3em;
+    border-radius: 0 1em 1em 0;
+    box-shadow: 0 0 .2em #333;
+    border: 1px solid #000;
+    background-color: #eee;
+    color: #222;
+}
+
+input.wtag-input:focus {
+    box-shadow: 0 0 .4em .1em #bdf, 0 0 1px 1px #000 inset;
+    border: 2px solid #0af;
+    background-image: #fff;
+    color: #000;
+}

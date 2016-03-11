@@ -1,0 +1,7 @@
+html {
+    background-image: url(main/background.jpg);
+    background-size: cover;
+    font-size: 16pt;
+    color: #000;
+    text-shadow: 3px 3px 1px #fff;
+}

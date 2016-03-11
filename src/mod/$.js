@@ -6,7 +6,7 @@ exports.config={
     major:1,
     minor:1,
     revision:0,
-    date:new Date(2015,11,3,14,17,45)
+    date:new Date(2016,2,11,17,46,4)
 };
 var currentLang = null;
 exports.lang = function(lang) {
@@ -32,14 +32,12 @@ exports.intl = function(words, params) {
     k = params[0],
     txt, newTxt, i, c, lastIdx, pos;
     if (!dic) {
-        console.error("Missing internationalization for language : \"" + exports.lang() + "\"!");
+        //console.error("Missing internationalization for language : \"" + exports.lang() + "\"!");
         return k;
     }
     txt = dic[k];
     if (!txt) {
-        console.error("Missing internationalization ["
-                      + exports.lang()
-                      + "]: \"" + k + "\"!");
+        //console.error("Missing internationalization [" + exports.lang() + "]: \"" + k + "\"!");
         return k;
     }
     if (params.length > 1) {

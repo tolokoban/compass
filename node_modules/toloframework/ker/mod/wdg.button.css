@@ -1,0 +1,127 @@
+a.wdg.wdg-button {
+    font-variant: small-caps;
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    padding: .4em .8em;
+    margin: .1em;
+    border-radius: .2em;
+    box-shadow: 0 1px rgb(255,255,255,.3) inset,
+                0 -1px rgb(0,0,0,.5) inset;
+    cursor: pointer;
+    background: #37a;
+    border: 1px solid #37a;
+}
+
+a.wdg.wdg-button.vertical {
+    flex-direction: column;
+}
+
+a.wdg.wdg-button.wide {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+a.wdg.wdg-button.red {
+    background: #a33;
+    border: 1px solid #a33;
+}
+
+a.wdg.wdg-button.green {
+    background: #3a7;
+    border: 1px solid #3a7;
+}
+
+a.wdg.wdg-button.blue {
+    background: #37a;
+    border: 1px solid #37a;
+}
+
+a.wdg.wdg-button::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+a.wdg.wdg-button:hover {
+    color: yellow;
+    text-shadow: 0 0 3px #000;
+}
+
+a.wdg.wdg-button:active {
+    transform: translate(.2em,.2em);
+}
+
+a.wdg.wdg-button > div {
+    -ms-flex-grow: 1;
+    -ms-flex-shrink: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+a.wdg.wdg-button > div.caption {
+    display: block;
+    white-space: nowrap;
+    padding-right: 1em;
+}
+
+a.wdg.wdg-button.vertical > div.caption {
+    padding: 0;
+    padding-bottom: .5em;
+}
+
+a.wdg.wdg-button.vertical.flip > div.caption {
+    padding: 0;
+    padding-top: .5em;
+}
+
+a.wdg.wdg-button > div.icon {
+    content: "";
+    display: inline-block;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    background-site: contain;    
+}
+
+a.wdg.wdg-button.flip > div.caption {
+    -ms-order: 1;
+    order: 1;
+    padding: 0;
+    padding-left: 1em;
+}
+
+a.wdg.wdg-button.flip > div.icon {
+    -ms-order: 0;
+    order: 0;
+    background-position: left 50%;
+}
+
+a.wdg.wdg-button > div.icon.hide {
+    display: none;
+}
+
+a.wdg.wdg-button > div.icon.ok {
+    width: 20px;
+    height: 20px;
+    background-image: url(wdg.button/ok.png);
+}
+
+a.wdg.wdg-button > div.icon.cancel {
+    width: 20px;
+    height: 20px;
+    background-image: url(wdg.button/cancel.png);
+}
+

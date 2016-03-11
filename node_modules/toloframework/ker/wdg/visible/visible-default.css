@@ -1,0 +1,11 @@
+.wtag-visible {
+    display: block;
+}
+
+.wtag-visible.inline:not(.hidden) {
+    display: inline;
+}
+
+.wtag-visible.hidden {
+    display: none;
+}

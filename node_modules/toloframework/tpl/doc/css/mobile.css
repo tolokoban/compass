@@ -1,0 +1,11 @@
+/* Adapt font-size to the screen */
+html {
+    font-size: 5vmin;
+}
+
+
+/* Sub-title in the header is useless on small screens. */
+body > header { height: 2rem; }
+body > section { top: 2rem; }
+body > header > h2 { display: none; }
+

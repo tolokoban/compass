@@ -1,0 +1,49 @@
+.tfw-wdg-book {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.tfw-wdg-book.fullscreen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.tfw-wdg-book > * {
+    position: absolute;
+    z-index: 0;
+}
+
+.tfw-wdg-book > *.overlay {
+    z-index: 1;
+}
+
+.tfw-wdg-book > *.page {
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transform: translateX(0);
+}
+
+.tfw-wdg-book > *.page.hide {
+    transform: translateX(-100%);
+}
+
+.tfw-wdg-book > *.page.right {
+    transform: translateX(100%);
+}
+
+.tfw-wdg-book > *.page.transition {
+    transition: .2s transform;
+}

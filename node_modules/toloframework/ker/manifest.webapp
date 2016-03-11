@@ -1,0 +1,16 @@
+{
+    "name": "{{NAME}}",
+    "version": "{{VERSION}}",
+    "description": "This is my first web app with the ToloFrameWork.",
+    "launch_path": "/index.html",
+    "fullscreen": "false",
+    "developer": {
+        "name": "My Name",
+        "url": "http://my-website.org"
+    },
+    "icons": {
+        "60": "/icon-60.png",
+        "128": "/icon-128.png",
+        "256": "/icon-256.png"
+    }
+}

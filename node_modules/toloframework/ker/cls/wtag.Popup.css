@@ -1,0 +1,42 @@
+.wtag-popup {
+    position: absolute;
+    display: table;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    height: 5rem;
+    color: #fff;
+    font-variant: small-caps;
+    transform: translateY(100%);
+    transition: transform .3s;
+    z-order: 999999;
+    box-shadow: 0 2px 2px #000, 0 2px 2px #000 inset;
+    border-top: 1px solid #fff;
+}
+
+.wtag-popup.show {
+    transform: translateY(0);
+}
+
+
+.wtag-popup > div {
+    position: relative;
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.wtag-popup > div.hide {
+    display: none;
+}
+
+.wtag-popup > div.msg {
+    background: rgba(0,50,100,.8);
+}
+
+.wtag-popup > div.err {
+    background: rgba(150,0,0,.8);
+}

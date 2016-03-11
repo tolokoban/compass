@@ -1,0 +1,139 @@
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+
+html, body {
+    height:100%;
+    overflow: hidden;
+}
+
+section.x-article {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12pt;
+    font-family: sans-serif;
+    background-color: lightgoldenrodyellow;
+}
+
+section.x-article  a[href] {
+    color: #a50;
+    text-decoration: none;
+}
+
+section.x-article  a[href]:hover {
+    text-decoration: underline;
+}
+
+
+section.x-article > header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    background-color: #420;
+    color: orange;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 .5em 0 0;
+    box-shadow: 0 2px 1em #000;
+    border-bottom: 1px solid #000;
+}
+
+section.x-article > header > a[href] {
+    display: inline-block;
+    width: 2em;
+    text-align: center;
+    margin: 0 1em 0 0;
+    color: orange;
+    border-right: 1px solid rgba(255,128,0,.6);
+    text-shadow: 1px 1px #000;
+}
+
+section.x-article > header > a[href]:hover {
+    background-color: orange;
+    text-decoration: none;
+    color: #420;
+}
+
+
+
+section.x-article > article {
+    position: absolute;
+    left: 0;
+    top: 2em;
+    right: 0;
+    bottom: 2em;
+    width: 100%;
+    overflow: auto;
+    padding: .5em;
+    max-width: 60em;
+}
+
+section.x-article > footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2em;
+    background-color: orange;
+    color: #000;
+    text-align: center;
+    overflow-x: auto;
+    box-shadow: 0 -2px 1em #000;
+    border-top: 1px solid #000;
+}
+
+section.x-article > footer > div {
+    position: relative;
+    display: table;
+    height: 100%;
+}
+
+section.x-article > footer > div > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 2em;
+    margin: 0 2px;
+}
+
+section.x-article > footer > div > div > div {
+    font-weight: bold;
+    line-height: 1.6em;
+}
+
+section.x-article > footer > div > div > a[href] {
+    display: inline-block;
+    font-weight: normal;
+    text-decoration: none;
+    background: #840;
+    color: #eee;
+    height: 1.6em;
+    width: 2em;
+    line-height: 1.6em;
+    border: 1px solid orange;
+    box-shadow: 0 0 0 1px #840 inset;
+}
+
+section.x-article > footer > div > div > a:hover {
+    background-color: #420;
+}
+
+
+section.x-article blockquote {
+    border-left: .5em solid darkorange;
+    padding-left: .5em;
+    margin-left: .5em;
+    font-size: 120%;
+    font-weight: 300;
+    line-height: 150%
+}
