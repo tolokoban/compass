@@ -2,4 +2,5 @@ tmp/
 www/
 *~
 *#
+node_modules/
 
