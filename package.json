@@ -20,7 +20,10 @@
   },
   "scripts": {
     "test": "jasmine",
-    "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
+    "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js",
+    "debug": "node node_modules/toloframework/bin/tfw.js build dev",
+    "clean": "node node_modules/toloframework/bin/tfw.js clean",
+    "release": "node node_modules/toloframework/bin/tfw.js clean build version"
   },
   "name": "Compass",
   "version": "1.1.0",
